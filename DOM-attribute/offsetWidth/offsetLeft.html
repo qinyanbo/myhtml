@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>offsetLeft</title>
+  <style>
+    body {
+      /* margin: 5px 5px 5px 5px; */
+      padding: 5px;
+      border: 1px solid black;
+    }
+
+    .test {
+      margin: 5px;
+      padding: 2px;
+      width: 200px;
+      height: 200px;
+      border: 1px solid lightblue;
+      /* float: left; */
+    }
+    .inner{
+      margin: 5px;
+      padding: 2px;
+      width: 100px;
+      height: 100px;
+      border: 1px solid antiquewhite;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="test" style="position: relative;">
+    <div class="inner" style="position: absolute;">offsetLeft测试</div>
+    
+  </div>
+</body>
+<script>
+  /*
+  * 1. 当offsetParent元素为body时，offsetLeft = 元素的左外边框至body的左内边框之间的距离 + body边框的宽度 + body的左外边距
+  * 2. offsetLeft = 元素的左外边框至offsetParent元素的左内边框之间的像素距离
+  * 
+  */
+
+  console.log(document.getElementsByTagName('div')[0].offsetParent);
+  console.log(document.getElementsByTagName('div')[0].offsetLeft);
+  console.log(document.getElementsByTagName('div')[0].offsetTop);
+
+  console.log(document.getElementsByClassName('inner')[0].offsetParent);
+  console.log(document.getElementsByClassName('inner')[0].offsetLeft);
+  console.log(document.getElementsByClassName('inner')[0].offsetTop);
+  
+</script>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>offsetWidth</title>
+  <style>
+  body{
+    /* margin: 5px 5px 5px 5px; */
+    padding: 5px;
+  }
+  div{
+    margin: 5px;
+    padding: 2px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid lightblue;
+    /* float: left; */
+  }
+  </style>
+</head>
+
+<body>
+  <div>
+    offsetWidth测试
+  </div>
+</body>
+<script>
+  /* 
+   * offsetWidth = width + padding*2 + border*2
+   * offsetHeight = height + padding*2 + border*2
+   * 注意：如果存在垂直滚动条，offsetHeight也包括垂直滚动条的高度；如果存在水平滚动条，offsetWidth也包括水平滚动条的宽度
+  */
+
+  console.log(document.getElementsByTagName('div')[0].offsetWidth);
+  console.log(document.getElementsByTagName('div')[0].offsetHeight);
+  console.log(document.getElementsByTagName('div')[0].offsetParent);
+  console.log(document.getElementsByTagName('div')[0].offsetLeft);
+  console.log(document.getElementsByTagName('div')[0].offsetTop);
+  
+  
+  
+  
+</script>
+</html>
